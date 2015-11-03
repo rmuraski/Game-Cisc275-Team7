@@ -1,4 +1,5 @@
 package team7.game;
+//*Pollution class   */
 
 public class Pollution extends GameUI {
 	public boolean isFixing;

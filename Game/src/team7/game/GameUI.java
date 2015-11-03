@@ -1,5 +1,6 @@
 package team7.game;
-
+/**GameUI class generates all of the images that are shown on the display.
+ *This UI is using Swing animation to generate the images. */
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
