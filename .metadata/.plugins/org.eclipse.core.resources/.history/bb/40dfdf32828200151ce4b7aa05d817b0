@@ -63,18 +63,7 @@ public abstract class Event {
 	}
 	
 	
-	public boolean hasSolution(Solution s) {
-		return s.Coordinates == this.coordinates;
-	}
 	
-	public void resolveEvent() {
-		setTimeUntilActive(0);
-		setActive(false);
-		setDmgPerSecond(0);
-		setDmgFixing(0);
-		setRadius(0);
-		setTimeUntilActive(0);
-	}
 	
 	
 	
