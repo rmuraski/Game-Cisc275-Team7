@@ -1,6 +1,6 @@
 package team7.game;
 
-public class Pollution extends Game {
+public class Pollution extends GameUI {
 	public boolean isFixing;
 
 	public boolean isFixing() {
