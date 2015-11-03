@@ -8,4 +8,5 @@ public abstract class Solution {
 	int fixingSpeed;
 	Point Coordinates;
 	Events type;
+
 }

@@ -1,0 +1,15 @@
+package team7.game;
+
+import java.awt.Point;
+
+public abstract class Event {
+	int timeUntilActive;
+	boolean active;
+	int dmgPerSecond;
+	int dmgFixing;
+	int timeUntilFixed;
+	Point coordinates;
+	Events type;
+	
+
+}

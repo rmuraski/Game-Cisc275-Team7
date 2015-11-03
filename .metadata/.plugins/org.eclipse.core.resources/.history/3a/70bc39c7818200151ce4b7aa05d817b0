@@ -1,0 +1,20 @@
+package team7.game;
+
+import java.awt.Point;
+
+public abstract class Event {
+	int timeUntilActive;
+	boolean active;
+	int dmgPerSecond;
+	int dmgFixing;
+	int timeUntilFixed;
+	Point coordinates;
+	int radius; // Area of Event will be starting at the coordinates as the center and epands
+	// out by the radious amount
+	Events type;
+	
+	
+	
+	
+
+}
