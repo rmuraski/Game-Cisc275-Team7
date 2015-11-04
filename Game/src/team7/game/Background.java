@@ -3,7 +3,7 @@
  * of the background. 
  */
 package team7.game;
-/*jfjdhjkf*/
+/*John Test 123*/
 public class Background {
 	/**
 	 * For deciding if objects should be drawn 
