@@ -7,7 +7,7 @@ import java.awt.Point;
  */
 public abstract class Solution {
 	int movingSpeed;
-	boolean Fixing=false;
+	boolean fixing;
 	int fixingSpeed;
 	Point Coordinates;
 	Events type;
@@ -16,7 +16,7 @@ public abstract class Solution {
 		return this.movingSpeed;
 	}
 	public boolean isFixing(){
-		return this.Fixing;
+		return this.fixing;
 	}
 	public abstract void fix();
 	public int getFixingSpeed(){
@@ -25,10 +25,20 @@ public abstract class Solution {
 	public Point getCoordinates(){
 		return this.Coordinates;
 	}
-	public int calculateFixTime(){
+	public int getFixTime(){
 		
 		//TODO claculate the fix time return it
 		return 0;
 	}
+	public void setMovingSpeed(int movingSpeed){
+		this.movingSpeed=movingSpeed;
+	}
+	public void setfixingSpeed(int fixingSpeed){
+		this.fixingSpeed=fixingSpeed;
+	}
+	public void setFixing(boolean fixing){
+		this.fixing=fixing;
+	}
+	
 	
 }
