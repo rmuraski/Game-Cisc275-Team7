@@ -18,5 +18,15 @@ public class EventTests {
 		assertEquals(0, e.getTimeUntilActive());
 		assertEquals(0, e.getRadius());
 	}
+	
+	@Test
+	public void testExpand() {
+		EventStub e = new EventStub();
+		e.setActive(false);
+		e.setRadius(5);
+		e.expand(5);
+		assertEquals(10, e.getRadius());
+		assertTrue(e.isActive());
+	}
 
 }

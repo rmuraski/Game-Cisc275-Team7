@@ -81,7 +81,10 @@ public abstract class Event {
 		setType(null);
 	}
 	
-	
+	public void expand(int amount) {
+		this.active = true;
+		this.setRadius(this.getRadius() + amount);
+	}
 	
 	
 

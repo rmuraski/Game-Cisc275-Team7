@@ -10,7 +10,7 @@ public class EventStub extends Event {
 		this.active = true;
 		this.radius = 3;
 		this.type = Events.ALGAEBLOOM;
-		this.dmgFixing = 3;
+		this.dmgFixing = 0;
 		this.dmgPerSecond = 3;
 	}
 
