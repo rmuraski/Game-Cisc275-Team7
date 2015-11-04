@@ -9,6 +9,10 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import team7.game.Pollution;
 
+/**
+ * @author k
+ *
+ */
 public class GameUI {
 
 	private JFrame frame;
