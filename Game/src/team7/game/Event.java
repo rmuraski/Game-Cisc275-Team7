@@ -13,6 +13,10 @@ public abstract class Event {
 	// out by the radius amount
 	Events type;
 	
+	
+	
+	public Event() {
+	}
 	public int getTimeUntilActive() {
 		return timeUntilActive;
 	}
@@ -74,6 +78,7 @@ public abstract class Event {
 		setDmgFixing(0);
 		setRadius(0);
 		setTimeUntilActive(0);
+		setType(null);
 	}
 	
 	
