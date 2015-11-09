@@ -29,12 +29,16 @@ public class Game extends Canvas implements Runnable{
 	
 	public Game(){
 		handler=new Handler();
+		this.addMouseListener(new MouseInput(handler));
 		
 		new GameUI(WIDTH, HEIGHT, "Game name", this);
 		
 		hud= new HUD();
 		
 		r=new Random();
+		
+		handler.addObject(new Trash(120,120, ID.Trash, handler));
+		handler.addObject(new Crab(WIDTH/5, HEIGHT*7/9,ID.Crab, handler));
 	}
 	
 	
