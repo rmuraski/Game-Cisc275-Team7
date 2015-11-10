@@ -32,9 +32,10 @@ public class Game extends Canvas implements Runnable{
 		spawner =new Spawn(handler,hud);
 		r= new Random();
 		
-		handler.addObject(new Crab(WIDTH/2-32, HEIGHT/2-32, ID.Crab, handler));
-		//handler.addObject(new Player(WIDTH/2+64,HEIGHT/2-32,ID.Player2));
+		
+		
 		handler.addObject(new Trash(r.nextInt(WIDTH),r.nextInt(HEIGHT),ID.Trash, handler));
+		handler.addObject(new Crab(WIDTH/2-32, HEIGHT/2-32, ID.Crab, handler));
 	}
 	
 	public synchronized void start(){

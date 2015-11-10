@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.Random;
 
+
 public class Crab extends GameObject {
 	Random r=new Random();
 	Handler handler;
@@ -16,12 +17,33 @@ public class Crab extends GameObject {
 
 	@Override
 	public void tick() {
-		y+=velY;
-		x+=velX;
-		
-		
+		for(int i=0;i<handler.object.size();i++){
+			GameObject tempObject=handler.object.get(i);
+			
+			if(tempObject.getId()==ID.Trash){
+				y+=velY;
+				x+=velX;
+				x=Game.clamp(x, 0, tempObject.getX());
+				y=Game.clamp(y, 0, tempObject.getY());
+				collision();
+			}
+		}
 		
 	}
+	
+	private void collision(){
+		for (int i = 0; i < handler.object.size(); i++){
+			GameObject tempObject=handler.object.get(i);
+			if(tempObject.getId()==ID.Trash){
+				
+				if(getBounds().intersects(tempObject.getBounds())){
+					HUD.HEALTH+=20;
+					
+				}
+			}
+		}
+	}
+	
 
 	@Override
 	public void render(Graphics g) {
@@ -32,8 +54,7 @@ public class Crab extends GameObject {
 
 	@Override
 	public Rectangle getBounds() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Rectangle(x,y,40,40);
 	}
 
 }
