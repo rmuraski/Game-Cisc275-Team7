@@ -3,24 +3,34 @@ package team7.game;
 import java.awt.Color;
 import java.awt.Graphics;
 
+/**
+ * @author Qichao Hong
+ *Head up display
+ */
 public class HUD {
 	
 	public static int HEALTH=10000;
 	
 	private int greenValue=255;
 	
-	private int score=0;
+	public static int score=0;
 	private int level=1;
 	
 	
+	/**
+	 * 
+	 */
 	public void tick(){
 		HEALTH= Game.clamp(HEALTH, 0, 10000);
 		greenValue=Game.clamp(greenValue, 0, 255);
 		
 		greenValue=HEALTH/100*2;
-		score++;
+		
 	}
 	
+	/**
+	 * @param g 
+	 */
 	public void render(Graphics g){
 		g.setColor(Color.gray);
 		g.fillRect(15, 15, 200, 32);

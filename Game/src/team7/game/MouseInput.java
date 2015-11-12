@@ -4,6 +4,12 @@ import java.awt.Point;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+/**
+ * @author Qichao Hong
+ * 
+ * Mouse input
+ *
+ */
 public class MouseInput implements MouseListener {
 	
 	private Handler handler;
@@ -11,6 +17,9 @@ public class MouseInput implements MouseListener {
 		this.handler=handler;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.awt.event.MouseListener#mouseClicked(java.awt.event.MouseEvent)
+	 */
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		Point key=e.getPoint();

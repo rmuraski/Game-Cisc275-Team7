@@ -11,7 +11,7 @@ import java.util.Random;
 public class Game extends Canvas implements Runnable{
 	
 	
-	public static final int WIDTH=640,HEIGHT=WIDTH/12*9;
+	public static final int WIDTH=800,HEIGHT=600;
 	private Thread thread;
 	private boolean running = false;
 	
@@ -19,7 +19,7 @@ public class Game extends Canvas implements Runnable{
 	private Random r;
 	
 	private HUD hud;
-	private Spawn spawner;
+	//private Spawn spawner;
 	
 	
 	public Game(){
@@ -29,13 +29,13 @@ public class Game extends Canvas implements Runnable{
 		new GameUI(WIDTH,HEIGHT,"Title", this);
 		
 		hud=new HUD();
-		spawner =new Spawn(handler,hud);
+		//spawner =new Spawn(handler,hud);
 		r= new Random();
 		
 		
 		
-		handler.addObject(new Trash(r.nextInt(WIDTH),r.nextInt(HEIGHT),ID.Trash, handler));
-		handler.addObject(new Crab(WIDTH/2-32, HEIGHT/2-32, ID.Crab, handler));
+		handler.addObject(new Trash(r.nextInt(WIDTH-32), r.nextInt(HEIGHT-32), ID.Trash, handler));
+		handler.addObject(new Crab(300, 300, ID.Crab, handler));
 	}
 	
 	public synchronized void start(){
