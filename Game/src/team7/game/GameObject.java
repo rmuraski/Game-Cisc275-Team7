@@ -13,7 +13,14 @@ public abstract class GameObject {
 	protected int x, y;
 	protected ID id;
 	protected int velX, velY;
+	protected boolean hasTarget;
 	
+	public boolean hasTarget() {
+		return hasTarget;
+	}
+	public void setHasTarget(boolean hasTarget) {
+		this.hasTarget = hasTarget;
+	}
 	/**
 	 * Constructor
 	 * @param x		x coordinate

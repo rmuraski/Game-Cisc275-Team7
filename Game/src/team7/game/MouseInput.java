@@ -26,17 +26,32 @@ public class MouseInput implements MouseListener {
 		for(int i=0; i<handler.object.size();i++){
 			GameObject tempObject=handler.object.get(i);
 			
+			if(tempObject.getId()==ID.Trash){
+				//Mouse events for Trash
+				if(key.getX()<(tempObject.getX()+40) && key.getX()>tempObject.getX()){
+					if(key.getY()<(tempObject.getY()+40) && key.getY()>tempObject.getY()){
+						for(int j=0; j<handler.object.size();j++){
+							GameObject temp=handler.object.get(j);
+							if(temp.getId()==ID.Crab){
+								temp.setHasTarget(true);
+							}
+						}
+					}
+				}
+				
+			}
 			if(tempObject.getId()==ID.Crab){
 				//Mouse events for Crab
 				if(key.getX()<(tempObject.getX()+40) && key.getX()>tempObject.getX()){
 					if(key.getY()<(tempObject.getY()+40) && key.getY()>tempObject.getY()){
+						if(tempObject.hasTarget()){
 						for(int j=0; j<handler.object.size();j++){
 							GameObject temp=handler.object.get(j);
 							if(temp.getId()==ID.Trash){
 								tempObject.setVelX((temp.getX()-tempObject.getX())/100);
 								tempObject.setVelY((temp.getY()-tempObject.getY())/100);
 							}
-						}
+						}}
 					}
 				}
 				

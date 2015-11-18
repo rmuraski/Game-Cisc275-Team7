@@ -36,8 +36,11 @@ public class Trash extends GameObject{
 	 */
 	
 	public void render(Graphics g) {
-		g.setColor(Color.red);
+		
+		g.setColor(Color.white);
 		g.fillRect(x, y, 40, 40);
+		
+		
 		
 	}
 

@@ -16,6 +16,7 @@ import java.util.Random;
 public class Crab extends GameObject {
 	Random r=new Random();
 	Handler handler;
+	boolean hasTarget;
 	
 	/**
 	 * Constructor
@@ -28,6 +29,7 @@ public class Crab extends GameObject {
 		
 		super(x, y, id);
 		this.handler=handler;
+		this.hasTarget=false;
 	}
 
 	
@@ -49,6 +51,18 @@ public class Crab extends GameObject {
 		
 	}
 	
+	
+	
+	public boolean hasTarget() {
+		return hasTarget;
+	}
+
+
+	public void setHasTarget(boolean hasTarget) {
+		this.hasTarget = hasTarget;
+	}
+
+
 	/**
 	 * judge the crab if it collision with crab
 	 */
